@@ -12,17 +12,21 @@ export default function Home() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    let link = e.target.value;
+    console.log(e);
+    let link = e.target[0].value;
 
-    const response = await fetch('/api/submit-link', {
+    console.log(link);
+
+    const response = fetch('/api/submit-link', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({'link': link}),
+      body: JSON.stringify({link: link}),
     });
 
-    console.log(link);
+    console.log(response);
+
     
   };
 

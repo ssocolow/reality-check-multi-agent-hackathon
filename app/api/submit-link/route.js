@@ -2,28 +2,26 @@ import FirecrawlApp from '@mendable/firecrawl-js';
 
 import { NextResponse } from 'next/server';
 
-const app = new FirecrawlApp({apiKey: "fc-44848be39e2e459f8feea4003dd9b168"});
+const app = new FirecrawlApp({apiKey: "fc-1855ceb9a3754a51b10b7c30838c0f14"});
 
 export async function POST(req) {
-  const link = await req.json();
+  const { link } = await req.json();
   console.log(link);
-
-  if (!link) {
-    return res.status(400).json({ error: 'Link is required' });
-  }
 
   console.log('Received link:', link);
 
-  const crawlResponse = await app.crawlUrl(link, {
-    limit: 100,
-    scrapeOptions: {
-        formats: ['markdown', 'html'],
-    }
-  })
+  // const crawlResponse = await app.crawlUrl(link, {
+  //   limit: 100,
+  //   scrapeOptions: {
+  //       formats: ['markdown', 'html'],
+  //   }
+  // })
 
-  if (!crawlResponse.success) {
-    throw new Error(`Failed to crawl: ${crawlResponse.error}`)
-  }
+  const crawlResponse = "responseeee !"
+
+  // if (!crawlResponse.success) {
+  //   throw new Error(`Failed to crawl: ${crawlResponse.error}`)
+  // }
 
   console.log(crawlResponse);
 
@@ -31,6 +29,7 @@ export async function POST(req) {
   return NextResponse.json(
     {
       successful: true,
+      message: crawlResponse
     },
     {
       status: 200
