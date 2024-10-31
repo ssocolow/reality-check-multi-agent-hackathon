@@ -10,14 +10,14 @@ export async function POST(req) {
 
   console.log('Received link:', link);
 
-  // const crawlResponse = await app.crawlUrl(link, {
-  //   limit: 100,
-  //   scrapeOptions: {
-  //       formats: ['markdown', 'html'],
-  //   }
-  // })
+  const crawlResponse = await app.crawlUrl(link, {
+    limit: 100,
+    scrapeOptions: {
+        formats: ['markdown', 'html'],
+    }
+  })
 
-  const crawlResponse = "responseeee !"
+  // const crawlResponse = "responseeee !"
 
   // if (!crawlResponse.success) {
   //   throw new Error(`Failed to crawl: ${crawlResponse.error}`)

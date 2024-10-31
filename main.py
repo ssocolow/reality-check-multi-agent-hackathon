@@ -137,7 +137,6 @@ web_content=content
 
 rebuild_prompt=f"""
 You are a proofreader, and you help to extract all the information from the 'Content' based on 'user intertest'.\n###\n"""+f"user interest: {user_interest}\n###\n"+f"Conetnt: {web_content}"
-os.environ["OPENAI_API_KEY"] = ''
 model_a_agent = ModelAgent(ModelPlatformType.OPENAI, ModelType.GPT_4O_MINI)
 model_b_agent = ModelAgent(ModelPlatformType.OPENAI, ModelType.GPT_4O)
 model_c_agent = ModelAgent(ModelPlatformType.OPENAI, ModelType.GPT_3_5_TURBO)
