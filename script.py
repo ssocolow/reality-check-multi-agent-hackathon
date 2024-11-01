@@ -247,7 +247,10 @@ print(response.msgs[0].content)
 
 
 # # Prompt for the API key securely
+<<<<<<< HEAD
 # # openai_api_key = getpass('Enter your API key: ')
+=======
+>>>>>>> dc8c389 (trying again)
 # sys_msg = 'You are an expert at coming up with hackathon ideas for multi-agent systems'
 
 
