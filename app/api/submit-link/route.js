@@ -71,6 +71,10 @@ export async function POST(req) {
     }
   )
 }
+
+// function doLLMStuff(firecrawled) {
+
+// }
 //     const { link } = req.body;
 
 //     if (!link) {
